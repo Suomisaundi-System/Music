@@ -1,0 +1,13 @@
+const name = decodeURIComponent(location.pathname.split("/").filter(Boolean).at(-1) || "System");
+document.title = `Suomisaundi System — ${name}`;
+const main = document.createElement("main");
+main.style.cssText = "max-width:860px;margin:10vh auto;padding:24px;font:16px system-ui,sans-serif;line-height:1.6";
+const title = document.createElement("h1");
+title.textContent = `Suomisaundi System — ${name}`;
+const description = document.createElement("p");
+description.textContent = "This independent community subsystem is initialized by index.js. Additional modules will be introduced here.";
+const home = document.createElement("a");
+home.href = "https://suomisaundi-system.github.io/";
+home.textContent = "Return to Suomisaundi System";
+main.append(title, description, home);
+document.body.append(main);
